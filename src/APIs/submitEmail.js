@@ -1,7 +1,8 @@
 import axios from "axios"
+import { apis } from "../Data/endpoints"
 
-const submitEmail = ()=>{
-    axios.post('')
+export const submitEmail = (to,subject,message)=>{
+    axios.post(apis.sendEmail,{to, subject, message })
     .then(res=>{
         console.log(res)
     })
